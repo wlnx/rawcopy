@@ -30,10 +30,12 @@ LPCWSTR ErrMsgs[] = {
 void ShowHelp()
 {
 	wprintf_s(
-		L"%s%s%s%s%s%s%s%s%s",
+		L"%s%s%s%s%s%s%s%s%s%s%s",
 		L"Utility to dump or restore EFS-encrypted files.\n",
 		L"If source file is EFS-encrypted, it will be dumped to destination.\n",
 		L"If source file is not EFS-encrypted, it is considered to be a dump and utility will restore it to destination.\n\n",
+		L"If EFS key pair is not installed, SeBackupPrivilege and SeRestorePrivilege may be required.",
+		L"If this is the case, run rawcopy as backup operator or local administrator.",
 		L"Usage:\n\trawcopy [/f] source destination\nrawcopy /?\n\n",
 		L"Parameters:\n",
 		L"\t/f\t\tIf destination file exists it will be overwritten.\n",
