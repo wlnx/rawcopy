@@ -44,9 +44,10 @@ void ShowHelp()
 		L"Return codes:\n\t0\tOperation completed successfully\n"
 	);
 	int i = 3;
-	while (!lstrcmp(L"", ErrMsgs[i]))
+	while (lstrcmp(L"", ErrMsgs[i]) != 0)
 	{
 		wprintf_s(L"\t%d\t%s\n", i, ErrMsgs[i]);
+		i++;
 	}
 }
 
